@@ -60,8 +60,7 @@
     .video-placeholder .play { font-size: 3rem; }
     .disclaimer { background: #1a1a1a; border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; font-size: 0.82rem; color: var(--muted); margin-bottom: 2rem; }
     footer { padding: 2rem 0; color: var(--muted); font-size: 0.82rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
-    .iframe-wrapper { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; height: 600px; }
-    .iframe-wrapper iframe { width: 100%; height: 100%; border: none; }
+
   </style>
 </head>
 <body>
@@ -112,17 +111,49 @@ rc-pulse report --api-key sk_your_key_here</pre>
           <div class="link-url">github.com/Layer-Group/rc-pulse</div>
         </div>
       </a>
-      <div class="link-card">
+      <a href="/demo/report.html" target="_blank" class="link-card" style="color:inherit;">
         <div class="link-icon">📊</div>
         <div>
-          <div class="link-title">Live Demo Report</div>
-          <div class="link-url">Dark Noise · Score: 90/100 (A)</div>
+          <div class="link-title">View Full Live Report →</div>
+          <div class="link-url">Opens in new tab</div>
         </div>
-      </div>
+      </a>
     </div>
 
-    <div class="iframe-wrapper">
-      <iframe src="/demo/report.html" title="rc-pulse Live Demo Report"></iframe>
+    <!-- Report Preview Card -->
+    <div style="background: #0f172a; border: 1px solid #334155; border-radius: 16px; overflow: hidden;">
+      <!-- Mini header -->
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; border-bottom: 1px solid #334155;">
+        <div style="font-weight: 800; font-size: 1.1rem; color: #f1f5f9;">rc<span style="color:#10b981">-pulse</span></div>
+        <div style="text-align:right; font-size: 0.78rem; color: #94a3b8;"><strong style="color:#f1f5f9; display:block;">Dark Noise</strong>Generated March 13, 2026</div>
+      </div>
+      <!-- KPIs -->
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: #334155;">
+        <div style="background:#1e293b; padding: 1.25rem 1.5rem;">
+          <div style="font-size:0.72rem; color:#94a3b8; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.4rem;">MRR</div>
+          <div style="font-size: 1.8rem; font-weight: 700; color: #f1f5f9;">$4,537</div>
+        </div>
+        <div style="background:#1e293b; padding: 1.25rem 1.5rem;">
+          <div style="font-size:0.72rem; color:#94a3b8; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.4rem;">Active Subs</div>
+          <div style="font-size: 1.8rem; font-weight: 700; color: #f1f5f9;">2,519</div>
+        </div>
+        <div style="background:#1e293b; padding: 1.25rem 1.5rem;">
+          <div style="font-size:0.72rem; color:#94a3b8; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.4rem;">Revenue (28d)</div>
+          <div style="font-size: 1.8rem; font-weight: 700; color: #f1f5f9;">$4,720</div>
+        </div>
+      </div>
+      <!-- Health Score -->
+      <div style="display: flex; align-items: center; gap: 1.5rem; padding: 1.5rem; background: #1e293b; border-top: 1px solid #334155;">
+        <div style="width:80px; height:80px; border-radius:50%; border:3px solid #10b981; display:flex; flex-direction:column; align-items:center; justify-content:center; flex-shrink:0;">
+          <div style="font-size:1.8rem; font-weight:800; color:#10b981; line-height:1;">90</div>
+          <div style="font-size:0.7rem; color:#94a3b8;">A</div>
+        </div>
+        <div>
+          <div style="font-size:1.1rem; font-weight:700; color:#10b981; margin-bottom:0.4rem;">Excellent</div>
+          <div style="font-size:0.85rem; color:#94a3b8;">Monthly churn 0.17% — 15x better than industry avg of ~2.5%</div>
+        </div>
+        <a href="/demo/report.html" target="_blank" style="margin-left:auto; background:#10b981; color:#fff; padding:0.6rem 1.2rem; border-radius:8px; font-weight:600; font-size:0.85rem; text-decoration:none; white-space:nowrap; flex-shrink:0;">View Full Report →</a>
+      </div>
     </div>
   </section>
 
