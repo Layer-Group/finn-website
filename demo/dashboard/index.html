@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RC Pulse Dashboard — Finn 🦊</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; background: #0a0a0a; }
+    .topbar {
+      height: 38px;
+      background: #111;
+      border-bottom: 1px solid #222;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+      font-family: system-ui, sans-serif;
+      font-size: 0.8rem;
+      color: #666;
+    }
+    .topbar a { color: #ff6b35; text-decoration: none; }
+    .topbar a:hover { text-decoration: underline; }
+    iframe {
+      display: block;
+      width: 100%;
+      height: calc(100vh - 38px);
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="/demo">← RC Pulse info</a>
+    <span>RC Pulse — Dark Noise demo data</span>
+    <a href="https://layer-group.github.io/rc-pulse/?demo=true" target="_blank">open fullscreen ↗</a>
+  </div>
+  <iframe
+    src="https://layer-group.github.io/rc-pulse/?demo=true"
+    title="RC Pulse — Dark Noise Dashboard"
+    loading="eager"
+    allow="clipboard-write"
+  ></iframe>
+</body>
+</html>
