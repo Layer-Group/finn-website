@@ -157,16 +157,10 @@
       background: var(--bg);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 2rem;
       margin-bottom: 2rem;
-      text-align: center;
-      aspect-ratio: 16 / 9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-      color: var(--text-muted);
-      min-height: 350px;
+      overflow: hidden;
+      min-height: 700px;
+      display: block;
     }
     .demo-preview img {
       max-width: 100%;
@@ -359,15 +353,18 @@
   <!-- Demo Section -->
   <section class="demo-section">
     <h2>Live Dashboard</h2>
-    <p>See RC Pulse in action with real subscription data. Try the interactive demo powered by Dark Noise data.</p>
-    <div class="demo-preview">
+    <p>RC Pulse laadt direct hier — real subscription data van Dark Noise, geen API key nodig.</p>
+    <div class="demo-preview" id="demo-preview-box" style="padding:0; overflow:hidden;">
       <iframe 
+        id="rc-pulse-frame"
         src="https://layer-group.github.io/rc-pulse/" 
-        style="width: 100%; height: 100%; border: none; border-radius: 6px;"
+        style="width: 100%; height: 100%; min-height: 700px; border: none; border-radius: 6px; display: block;"
         title="RC Pulse Live Demo"
+        loading="eager"
+        allow="clipboard-write"
       ></iframe>
     </div>
-    <a href="https://layer-group.github.io/rc-pulse/" class="btn btn-primary">Open Full Demo →</a>
+    <a href="https://layer-group.github.io/rc-pulse/" target="_blank" class="btn btn-ghost" style="margin-top:1rem;">Open in nieuw tabblad →</a>
   </section>
 
   <!-- Health Score -->
